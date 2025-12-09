@@ -1,36 +1,43 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Localized & Filtered API Data Dashboard
 
-## Getting Started
+A minimal Next.js dashboard demonstrating:
 
-First, run the development server:
+- Internationalized routing (`/en` and `/fr`)
+- REST API data fetching from JSONPlaceholder
+- Client-side search and pagination
+- Loading and error states
+- Responsive UI with Tailwind CSS
+
+---
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+- Node.js 18 or higher
+- npm or yarn
+
+### Installation
+
+Clone the repository and install dependencies:
 
 ```bash
+git clone https://github.com/owlsspell/localized-dashboard.git
+cd localized-dashboard
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🌐 Language Switching
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+This dashboard supports internationalized routing with Next.js App Router.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- Navigate to `/en` for the English version
+- Navigate to `/fr` for the French version
 
-## Learn More
+All static texts (titles, placeholders, buttons) are loaded from a locale dictionary (`i18n.ts`) based on the `[locale]` route segment.
 
-To learn more about Next.js, take a look at the following resources:
+Example:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- [http://localhost:3000/en](http://localhost:3000/en) → English dashboard
+- [http://localhost:3000/fr](http://localhost:3000/fr) → French dashboard
